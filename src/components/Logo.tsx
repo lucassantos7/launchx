@@ -12,7 +12,7 @@ interface LogoProps {
 export function Logo({animation}: LogoProps){
   
   return (
-    <div className="relative w-[85px] h-[85px]">
+    <div id="mask" className="relative w-[85px] h-[85px]">
       {animation && (
         <motion.div
           initial={{

@@ -6,3 +6,19 @@
 .gradient-for-bottom {
   background: linear-gradient(180deg, #000 0%, #3D3D3D 100%);
 }
+
+.masked {
+  display: inline-block;
+
+  -webkit-mask-image: url("../assets/logo-full.svg");
+  mask-image: url("../assets/logo-full.svg");
+
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+
+  -webkit-mask-position: top right;
+  mask-position: top right;
+  background-color: white;
+  /* -webkit-mask-size: %; */
+  /* mask-size: %; */
+}

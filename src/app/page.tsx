@@ -10,6 +10,7 @@ import { useState } from 'react'
 import WavyText from '@/components/WaveText'
 import { FirstLoader } from '@/components/FirstLoader'
 import classNames from 'classnames'
+import ReactPlayer from 'react-player'
 
 export default function Home() {
     const [step, setStep] = useState(0)
@@ -57,7 +58,7 @@ export default function Home() {
             {step == 1 && (
                 <div className='text-white'>
                     <div className='flex flex-col items-start justify-center gap-2 font-bold text-5xl p-6 relative'>
-                        <motion.div 
+                        <motion.div
                             initial={{
                                 opacity: 0,
                                 y: 150
@@ -69,9 +70,14 @@ export default function Home() {
                             transition={{
                                 duration: 0.3
                             }}
-                            className='absolute right-8 -top-8'
+                            className='absolute right-8 -top-8 '
                         >
-                            <Logo/>
+                            {/* <video width="320" height="180" loop muted autoPlay>
+                                <source src="https://livefiredev.com/wp-content/uploads/2022/09/size_reduced_fire_bg_video.mp4" type="video/mp4"/>
+                            </video> */}
+                            <div className='masked'>
+                                <ReactPlayer playing={true} muted  url='https://www.youtube.com/watch?v=NNJNVOWwg30&ab_channel=ExuberanteNatureza' />
+                            </div>
                         </motion.div>
                         <motion.h1
                             initial={{
